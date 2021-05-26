@@ -19,17 +19,19 @@
 
 #---来自----https://github.com/IvanSolis1989/OpenWrt-DIY/----------
 
+#这一步和diy-part1.sh里重复
 # Add luci-app-ssr-plus  depth=1只要clone最近的一个版本，pushd popd 以栈模式切换目录
-pushd package/lean
-git clone --depth=1 https://github.com/fw876/helloworld
-popd
+#pushd package/lean
+#git clone --depth=1 https://github.com/fw876/helloworld
+#popd
 
 # Clone community packages to package/community
 mkdir package/community
 pushd package/community
 
+#这一步和diy-part1.sh里重复
 # Add Lienol's Packages
-git clone --depth=1 https://github.com/Lienol/openwrt-package
+#git clone --depth=1 https://github.com/Lienol/openwrt-package
 
 # Add dnsfilter
 git clone --depth=1 https://github.com/garypang13/luci-app-dnsfilter

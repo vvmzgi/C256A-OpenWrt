@@ -10,6 +10,8 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+# 在./scripts/feeds install -a之后操作
+# 是在openwrt目录中执行的
 
 
 

@@ -16,24 +16,32 @@
 
 
 # Modify default IP  修改默认IP为192.168.10.1
-#sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+# sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+
+# -------------------------------------------------------------
+
+# 添加minieap 锐捷V3V4
+git clone https://github.com/BoringCat/minieap-openwrt.git package/minieap
+pushd package/minieap
+sed -i 's/0.92.1/0.93/g' Makefile
+popd
 
 
-#---来自----https://github.com/IvanSolis1989/OpenWrt-DIY/----------
+# ---来自----https://github.com/IvanSolis1989/OpenWrt-DIY/----------
 
-#这一步和diy-part1.sh里重复
+# 这一步和diy-part1.sh里重复
 # Add luci-app-ssr-plus  depth=1只要clone最近的一个版本，pushd popd 以栈模式切换目录
-#pushd package/lean
-#git clone --depth=1 https://github.com/fw876/helloworld
-#popd
+# pushd package/lean
+# git clone --depth=1 https://github.com/fw876/helloworld
+# popd
 
 # Clone community packages to package/community
 mkdir package/community
 pushd package/community
 
-#这一步和diy-part1.sh里重复
+# 这一步和diy-part1.sh里重复
 # Add Lienol's Packages
-#git clone --depth=1 https://github.com/Lienol/openwrt-package
+# git clone --depth=1 https://github.com/Lienol/openwrt-package
 
 # Add dnsfilter
 git clone --depth=1 https://github.com/garypang13/luci-app-dnsfilter

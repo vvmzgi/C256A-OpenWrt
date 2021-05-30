@@ -18,6 +18,9 @@
 # Modify default IP  修改默认IP为192.168.10.1
 # sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
+# 修改默认wifi名称ssid为Xiaomi_R4A
+# sed -i 's/ssid=OpenWrt/ssid=XXKDB-R4A/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
 # -------------------------------------------------------------
 
 # 添加minieap 锐捷V3V4

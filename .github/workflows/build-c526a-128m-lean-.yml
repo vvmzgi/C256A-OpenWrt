@@ -7,6 +7,8 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
 #
+# 使用Lean大源码，默认C526A是128M，所以编译后无法在原分区表上启动，刷入后4个网口定时闪烁，不停重启
+# UPLOAD_BIN_DIR true 可以上传编译的IPK，有些可以不用加入固件，先择M编译后在这里下载
 
 name: Build C256A OpenWrt
 
@@ -26,7 +28,7 @@ env:
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
